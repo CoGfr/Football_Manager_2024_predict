@@ -1,5 +1,5 @@
 # Football_Manager_2024_predict_project
-Link: https://footballmanager2024cgfr.streamlit.app/
+[App link](https://footballmanager2024cgfr.streamlit.app/)
 -------
 Data Science project to predict whether a defensive player will progress in FM24 based on his stats.
 -------
