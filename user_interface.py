@@ -12,6 +12,7 @@ st.set_page_config(
      layout="wide",
 )
 st.title('Will my defensive player progress?')
+st.subheader('The model has a f1 score of 0.61 for Progress, 0.79 for Regress and 0.78 for Same Level')
 
 col1, col2, col3, col4 = st.columns(4) #devide the page in four columns
 
