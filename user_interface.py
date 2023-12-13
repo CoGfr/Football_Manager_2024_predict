@@ -13,11 +13,11 @@ st.set_page_config(
 )
 st.title('Will my defensive player progress?')
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4 = st.columns(4) #devide the page in four columns
 
-with col1:
+with col1: # allows to display content in the first column
     st.header('Technique', divider='red')
-    Cen = st.number_input('Centres', value=10, min_value=0,max_value=20, step=1)
+    Cen = st.number_input('Centres', value=10, min_value=0,max_value=20, step=1) # asks the user to enter a player stat
     Ctr = st.number_input('Contrôle', value=10, min_value=0,max_value=20, step=1)
     Cor = st.number_input('Corners', value=10,  min_value=0,max_value=20, step=1)
     CF = st.number_input('Coups francs', value=10,  min_value=0,max_value=20, step=1)
@@ -32,7 +32,7 @@ with col1:
     Tir = st.number_input('Tirs de loin', value=10, min_value=0,max_value=20, step=1)
     T_lg = st.number_input('Touches longues', value=10, min_value=0,max_value=20, step=1)
 
-with col2:
+with col2:# allows to display content in the second column
     st.header('Mental', divider='red')
     Agr = st.number_input('Agressivité', value=10, min_value=0,max_value=20, step=1)
     Ant = st.number_input('Anticipation', value=10, min_value=0,max_value=20, step=1)
@@ -49,7 +49,7 @@ with col2:
     Vis = st.number_input('Vision du jeu', value=10, min_value=0,max_value=20, step=1)
     Vol = st.number_input('Volume de jeu', value=10, min_value=0,max_value=20, step=1)
 
-with col3:
+with col3: # allows to display content in the third column
     st.header('Physique', divider='red')
     Acc = st.number_input('Accélération', value=10, min_value=0,max_value=20, step=1)
     Agi = st.number_input('Agilité', value=10, min_value=0,max_value=20, step=1)
@@ -60,7 +60,7 @@ with col3:
     Phy = st.number_input('Qualités phys. nat.', value=10, min_value=0,max_value=20, step=1)
     Vit = st.number_input('Vitesse', value=10, min_value=0,max_value=20, step=1)
 
-with col4:
+with col4: # allows to display content in the 4th column
     st.header('Age', divider='red')
     Age = st.number_input('Age', value=15, min_value=15,max_value=45, step=1)
 
@@ -103,8 +103,8 @@ input_dict = {
     'Tcl': Tcl,
     'Tec': Tec
 }
-with col4:
-    if st.button('Predict'):
+with col4:# allows to display content in the 4th column
+    if st.button('Predict'): #Runs the data through the model to make a prediction when the user clicks on the button 
         inputs = pd.DataFrame(input_dict, index=[0])
         def_stats = ['Head', 'Mar', 'Tcl', 'Agr', 'Ant', 'Ctn', 'Crg', 'Dec', 'Pla', 'Sgf', 'Jump', 'Pui', 'Vit']
         inputs['best_def'] = inputs[def_stats].mean(axis=1)
